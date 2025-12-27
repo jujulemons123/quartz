@@ -7,11 +7,11 @@ export const sharedPageComponents: SharedLayout = {
   header: [],
   afterBody: [],
   footer: Component.Footer({
-    links: {}, // This removes the GitHub and Discord links
+    links: {}, // Removes GitHub/Discord links from EVERY page
   }),
 }
 
-// components for pages that display a single page (e.g. a single note)
+// components for single notes (like your home page)
 export const defaultContentPageLayout: PageLayout = {
   beforeBody: [
     Component.ConditionalRender({
@@ -19,7 +19,6 @@ export const defaultContentPageLayout: PageLayout = {
       condition: (page) => page.fileData.slug !== "index",
     }),
     Component.ArticleTitle(),
-    // Reading time hidden here
     Component.ContentMeta({ showReadingTime: false, showComma: false }),
     Component.TagList(),
   ],
@@ -33,19 +32,17 @@ export const defaultContentPageLayout: PageLayout = {
           grow: true,
         },
         { Component: Component.Darkmode() },
-        { Component: Component.ReaderMode() },
+        // ReaderMode removed
       ],
     }),
-    // Explorer removed from the list to clean up the sidebar
   ],
   right: [
     Component.DesktopOnly(Component.TableOfContents()),
     Component.Backlinks(),
-    // Graph View removed
   ],
 }
 
-// components for pages that display lists of pages (e.g. tags or folders)
+// components for folder/list pages (like /The-lists/2024)
 export const defaultListPageLayout: PageLayout = {
   beforeBody: [
     Component.Breadcrumbs(), 
@@ -62,9 +59,9 @@ export const defaultListPageLayout: PageLayout = {
           grow: true,
         },
         { Component: Component.Darkmode() },
+        // ReaderMode removed here too to fix the list pages
       ],
     }),
-    // Explorer removed from list pages as well
   ],
   right: [],
 }

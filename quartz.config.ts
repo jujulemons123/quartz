@@ -1,12 +1,20 @@
 import { QuartzConfig } from "./quartz/cfg"
 import * as Plugin from "./quartz/plugins"
 
+/**
+ * Quartz 4.0 Configuration
+ *
+ * See https://quartz.jzhao.xyz/configuration for more information.
+ */
 const config: QuartzConfig = {
   configuration: {
     pageTitle: "JGW's Archive",
     enableGPA: false,
     enablePageViews: false,
-    defaultDateType: "created", // Added this to fix the Build Error
+    defaultDateType: "created", // Fixed: missing field
+    generateSocialImages: false,
+    baseUrl: "jujulemons123.github.io/quartz",
+    ignorePatterns: [], // Fixed: missing field causing 'not iterable' error
     theme: {
       fontOrigin: "googleFonts",
       cdnCaching: true,
@@ -59,8 +67,8 @@ const config: QuartzConfig = {
       Plugin.ComponentResources(),
       Plugin.ContentPage(),
       Plugin.FolderPage({
-        showFolderTitle: false, // Keeps "Folder: The-lists" hidden
-        showFolderCount: false, // Keeps "15 items..." hidden
+        showFolderTitle: false, // Fixes "Folder: The-lists"
+        showFolderCount: false, // Fixes "15 items under this folder"
       }),
       Plugin.TagPage(),
       Plugin.ContentIndex({

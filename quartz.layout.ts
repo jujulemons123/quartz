@@ -8,13 +8,12 @@ export const sharedPageComponents: SharedLayout = {
   footer: Component.Footer({ links: {} }),
 }
 
-// Components for standard notes and Home page
+// Layout for standard notes (like a specific book or painting note)
 export const defaultContentPageLayout: PageLayout = {
   beforeBody: [
-    // This restores the navigation links at the top
     Component.ConditionalRender({
       component: Component.Breadcrumbs(),
-      condition: (page) => page.fileData.slug !== "index",
+      condition: (page) => page.fileData.slug !== "index", // Hide only on Home
     }),
     Component.ArticleTitle(),
     Component.TagList(),
@@ -31,10 +30,11 @@ export const defaultContentPageLayout: PageLayout = {
   ],
 }
 
-// Components for folder/list pages (e.g., /The-lists/)
+// Layout for Folder List pages (like /The-lists/ or /2024/)
 export const defaultListPageLayout: PageLayout = {
   beforeBody: [
-    Component.Breadcrumbs(), // Restored here too
+    // We remove the condition here so they show up on all list pages
+    Component.Breadcrumbs(), 
     Component.ArticleTitle(), 
   ],
   left: [

@@ -1,30 +1,5 @@
 @use "./base.scss";
 
-// 1. FORCE THEME COLORS
-:root {
-  --light: #fcfaf1 !important;     
-  --medium: #8b2626 !important;    
-  --secondary: #8b2626 !important; 
-  --dark: #2b2b2b !important;
-}
-
-[aria-byte-theme="dark"] {
-  --light: #0d1117 !important;     
-  --medium: #8b2626 !important;    
-  --secondary: #8b2626 !important;
-  --dark: #f0f6fc !important;      
-}
-
-// 2. FORCE FONTS
-h1, h2, h3, h4, h5, h6, .page-title, .backlinks > h3, .breadcrumb-element {
-  font-family: 'Lustria', serif !important;
-  font-style: italic !important;
-  color: var(--secondary) !important;
-}
-
-body, p, li, span, a, .backlinks li {
-  font-family: 'Cormorant Garamond', serif !important;
-}
 
 // 3. BREADCRUMB SPECIFIC STYLING
 .breadcrumbs a {

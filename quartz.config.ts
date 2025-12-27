@@ -9,18 +9,18 @@ const config: QuartzConfig = {
     defaultDateType: "created",
     generateSocialImages: false,
     baseUrl: "jujulemons123.github.io/quartz",
-    ignorePatterns: [],
+    ignorePatterns: [], // This MUST be here to fix the "not iterable" error
     theme: {
       fontOrigin: "googleFonts",
       cdnCaching: true,
       typography: {
-        header: "Lustria",            // Header Font restored
-        body: "Cormorant Garamond",   // Body Font restored
+        header: "Lustria",            // Restores your Original Header
+        body: "Cormorant Garamond",   // Restores your Original Body
         code: "IBM Plex Mono",
       },
       colors: {
         lightMode: {
-          light: "#fcfaf1",          // Original Parchment Background
+          light: "#fcfaf1",          // Original Parchment
           lightgray: "#e5e5e5",
           gray: "#b8b8b8",
           darkgray: "#4e4e4e",
@@ -62,8 +62,8 @@ const config: QuartzConfig = {
       Plugin.ComponentResources(),
       Plugin.ContentPage(),
       Plugin.FolderPage({
-        showFolderTitle: false, // Keeps "Folder: The-lists" hidden
-        showFolderCount: false, // Keeps "15 items..." hidden
+        showFolderTitle: false, // Fixes "Folder: The-lists"
+        showFolderCount: false, // Fixes "15 items under this folder"
       }),
       Plugin.TagPage(),
       Plugin.ContentIndex({

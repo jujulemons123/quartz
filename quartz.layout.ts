@@ -19,50 +19,35 @@ export const defaultContentPageLayout: PageLayout = {
       condition: (page) => page.fileData.slug !== "index",
     }),
     Component.ArticleTitle(),
-    // Dates are hidden here to keep the welcome page clean
+    // Dates hidden on standard notes/home
     Component.ContentMeta({ showReadingTime: false, showComma: false }),
     Component.TagList(),
   ],
   left: [
     Component.PageTitle(),
     Component.MobileOnly(Component.Spacer()),
-    Component.Flex({
-      components: [
-        {
-          Component: Component.Search(),
-          grow: true,
-        },
-        { Component: Component.Darkmode() },
-      ],
-    }),
+    Component.Search(), // Search and Darkmode are now stacked for stability
+    Component.Darkmode(),
   ],
   right: [
     Component.DesktopOnly(Component.TableOfContents()),
-    // Backlinks kept here; they only appear if other pages link to the current one
-    Component.Backlinks(),
+    // Backlinks removed from here to clean up the right side
   ],
 }
 
-// components for folder/list pages (like /The-lists/)
+// components for folder/list pages (Like your preferred list view)
 export const defaultListPageLayout: PageLayout = {
   beforeBody: [
     Component.Breadcrumbs(), 
     Component.ArticleTitle(), 
-    // Dates are KEPT here as requested for your list view
+    // Dates KEPT here as requested for the list view
     Component.ContentMeta({ showReadingTime: false, showComma: true })
   ],
   left: [
     Component.PageTitle(),
     Component.MobileOnly(Component.Spacer()),
-    Component.Flex({
-      components: [
-        {
-          Component: Component.Search(),
-          grow: true,
-        },
-        { Component: Component.Darkmode() },
-      ],
-    }),
+    Component.Search(),
+    Component.Darkmode(),
   ],
   right: [],
 }

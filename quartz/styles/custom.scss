@@ -15,18 +15,17 @@ footer {
   display: none !important;
 }
 
-// 3. ICON SCALING & SEARCH FIX
-.search-button, .darkmode-toggle {
-  width: 20px !important;
-  height: 20px !important;
-  padding: 0 !important;
-}
-svg {
-  max-width: 18px !important;
-  max-height: 18px !important;
+// 3. SEARCH & DARKMODE FIX
+// This prevents the "messed up" overlapping icons
+.search {
+  margin-bottom: 1rem;
 }
 
-// 4. IMAGE ALIGNMENT (Left-Aligned, no frames)
+.darkmode-toggle {
+  margin-top: 0.5rem;
+}
+
+// 4. IMAGE ALIGNMENT (Strict Left-Align)
 img {
   max-width: 100%;
   height: auto;
@@ -40,7 +39,7 @@ img {
 }
 
 // 5. DATE MANAGEMENT
-// Hides dates on standard pages (index/notes)
+// Hides dates specifically on the home page and standard notes
 .page > .content-meta {
   display: none !important;
 }

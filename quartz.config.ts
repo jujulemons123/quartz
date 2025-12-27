@@ -14,18 +14,18 @@ const config: QuartzConfig = {
       fontOrigin: "googleFonts",
       cdnCaching: true,
       typography: {
-        header: "Cormorant Garamond", // Exactly as requested
-        body: "Lustria",             // Exactly as requested
+        header: "Cormorant Garamond", // Your requested header font
+        body: "Lustria",             // Your requested body font
         code: "IBM Plex Mono",
       },
       colors: {
         lightMode: {
-          light: "#FFFDE7",          // Your exact creamy background
-          lightgray: "#C5C2A5",
+          light: "#FFFDE7",          // Your creamy background
+          lightgray: "#C5C2A5",      
           gray: "#979690",
           darkgray: "#4A3728",
           dark: "#1B2620",
-          secondary: "#8B0000",      // Your exact red
+          secondary: "#8B0000",      // Your red theme color
           tertiary: "#225C59",
           highlight: "rgba(139, 0, 0, 0.05)",
           textHighlight: "#fff23688",
@@ -55,7 +55,7 @@ const config: QuartzConfig = {
       Plugin.TableOfContents(),
       Plugin.CrawlLinks({ markdownLinkResolution: "shortest" }),
       Plugin.Description(),
-      Plugin.Popovers(), // Fixed build error from screenshot 21.40.44
+      Plugin.Popovers(), // FIXED: Correctly placed in transformers
     ],
     filters: [Plugin.RemoveDrafts()],
     emitters: [
@@ -63,8 +63,8 @@ const config: QuartzConfig = {
       Plugin.ComponentResources(),
       Plugin.ContentPage(),
       Plugin.FolderPage({
-        showFolderTitle: false,
-        showFolderCount: false,
+        showFolderTitle: false, 
+        showFolderCount: false, 
       }),
       Plugin.TagPage(),
       Plugin.ContentIndex({ enableSiteMap: true, enableRSS: true }),

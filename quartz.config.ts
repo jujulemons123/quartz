@@ -44,3 +44,6 @@ export const defaultListPageLayout: PageLayout = {
   ],
   right: [],
 }
+
+
+export default config

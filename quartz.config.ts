@@ -2,22 +2,32 @@ theme: {
       fontOrigin: "googleFonts",
       cdnCaching: true,
       typography: {
-        header: "Cormorant Garamond", // Your perfect header choice
-        body: "Lustria",            // Your elegant body choice
-        code: "IBM Plex Mono",
+        header: "Cormorant Garamond",
+        body: "Lustria",
+        code: "IBM Plex Mono", // Ensure there is a comma here!
       },
       colors: {
         lightMode: {
-          light: "#FFFDE7",        // Background
-          lightgray: "#C5C2A5",    // Borders
+          light: "#FFFDE7",
+          lightgray: "#C5C2A5",
           gray: "#979690",
-          darkgray: "#4A3728",     // Header Color (Walnut)
-          dark: "#1B2620",         // Body Color (Deep Pine)
-          secondary: "#8B0000",    // Link Color (Oxblood)
+          darkgray: "#4A3728",
+          dark: "#1B2620",
+          secondary: "#8B0000",
           tertiary: "#225C59",
           highlight: "rgba(139, 0, 0, 0.05)",
-          textHighlight: "#fff23688",
+          textHighlight: "#fff23688", // Ensure this comma exists!
         },
-        // ... (darkMode stays as is)
+        darkMode: {
+          light: "#161618",
+          lightgray: "#393639",
+          gray: "#646464",
+          darkgray: "#d4d4d4",
+          dark: "#ebebec",
+          secondary: "#7b97aa",
+          tertiary: "#84a59d",
+          highlight: "rgba(143, 159, 169, 0.15)",
+          textHighlight: "#b3aa0288",
+        },
       },
     },

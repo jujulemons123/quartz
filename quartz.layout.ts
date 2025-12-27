@@ -1,13 +1,10 @@
 import { PageLayout, SharedLayout } from "./quartz/cfg"
 import * as Component from "./quartz/components"
 
-// components shared across all pages
 export const sharedPageComponents: SharedLayout = {
   head: Component.Head(),
   header: [],
-  afterBody: [],
-  // ADDED Popovers here so they work globally
-  beforeBody: [Component.Popovers()], 
+  afterBody: [Component.Popovers()], // Restores hover previews
   footer: Component.Footer({
     links: {
       GitHub: "https://github.com/jackyzha0/quartz",
@@ -16,7 +13,6 @@ export const sharedPageComponents: SharedLayout = {
   }),
 }
 
-// components for single notes
 export const defaultContentPageLayout: PageLayout = {
   beforeBody: [
     Component.ConditionalRender({
@@ -24,22 +20,15 @@ export const defaultContentPageLayout: PageLayout = {
       condition: (page) => page.fileData.slug !== "index",
     }),
     Component.ArticleTitle(),
-    // Dates are staying removed as requested
     Component.TagList(),
   ],
   left: [
     Component.PageTitle(),
     Component.MobileOnly(Component.Spacer()),
-    Component.Flex({
-      components: [
-        {
-          Component: Component.Search(),
-          grow: true,
-        },
-        { Component: Component.Darkmode() },
-        { Component: Component.ReaderMode() },
-      ],
-    }),
+    // Removed Flex container; components will now stack neatly
+    Component.Search(),
+    Component.Darkmode(),
+    Component.ReaderMode(),
   ],
   right: [
     Component.DesktopOnly(Component.TableOfContents()),
@@ -47,7 +36,6 @@ export const defaultContentPageLayout: PageLayout = {
   ],
 }
 
-// components for folder/list pages
 export const defaultListPageLayout: PageLayout = {
   beforeBody: [
     Component.Breadcrumbs(), 
@@ -56,15 +44,8 @@ export const defaultListPageLayout: PageLayout = {
   left: [
     Component.PageTitle(),
     Component.MobileOnly(Component.Spacer()),
-    Component.Flex({
-      components: [
-        {
-          Component: Component.Search(),
-          grow: true,
-        },
-        { Component: Component.Darkmode() },
-      ],
-    }),
+    Component.Search(),
+    Component.Darkmode(),
   ],
   right: [],
 }

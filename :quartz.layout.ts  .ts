@@ -4,7 +4,6 @@ import * as Component from "./quartz/components"
 export const sharedPageComponents: SharedLayout = {
   head: Component.Head(),
   header: [],
-  afterBody: [Component.Popovers()], // Restores hover previews
   footer: Component.Footer({
     links: {
       GitHub: "https://github.com/jackyzha0/quartz",

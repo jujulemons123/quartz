@@ -1,0 +1,9 @@
+- [Light and Colour (Goethe's Theory) – The Morning after the Deluge – Moses Writing the Book of Genesis](https://en.wikipedia.org/wiki/Light_and_Colour_(Goethe%27s_Theory)_%E2%80%93_The_Morning_after_the_Deluge_%E2%80%93_Moses_Writing_the_Book_of_Genesis#/media/File:Unmatinapresledeluge.jpg) by J. M. W. Turner
+- [Judith Beheading Holofernes](https://en.wikipedia.org/wiki/Judith_Beheading_Holofernes_%28Caravaggio%29) by Caravaggio
+- [Two Women Running on the Beach](https://www.museepicassoparis.fr/fr/deux-femmes-courant-sur-la-plage) by Pablo Picasso
+- [Compartment C, Car 293](https://www.cineclubdecaen.com/peinture/peintres/hopper/38compartimentcvoiture293.htm) by Edward Hopper
+- [The Artist's Garden at Vétheuil](https://www.nga.gov/artworks/52189-artists-garden-vetheuil) by Claude Monet
+- [The Song of the Lark](https://en.wikipedia.org/wiki/The_Song_of_the_Lark_(Jules_Breton)) by Jules Breton
+- [Self-Portrait](https://npg.si.edu/object/npg_NPG.85.19) by  Alice Neel
+- [The Lute Player](https://en.wikipedia.org/wiki/The_Lute_Player_(Hals)) by Frans Hals
+- 

@@ -19,7 +19,7 @@ export const defaultContentPageLayout: PageLayout = {
       condition: (page) => page.fileData.slug !== "index",
     }),
     Component.ArticleTitle(),
-    // Dates are now restored
+    // Dates restored for the index and other pages
     Component.ContentMeta({ showReadingTime: false, showComma: true }),
     Component.TagList(),
   ],
@@ -72,3 +72,7 @@ export const defaultListPageLayout: PageLayout = {
         },
         { Component: Component.Darkmode() },
       ],
+    }),
+  ],
+  right: [],
+}

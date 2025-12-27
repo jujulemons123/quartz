@@ -11,7 +11,7 @@ export const sharedPageComponents: SharedLayout = {
   }),
 }
 
-// components for single notes (Home page and Archive notes)
+// components for single notes (Home page and standard notes)
 export const defaultContentPageLayout: PageLayout = {
   beforeBody: [
     Component.ConditionalRender({
@@ -19,7 +19,7 @@ export const defaultContentPageLayout: PageLayout = {
       condition: (page) => page.fileData.slug !== "index",
     }),
     Component.ArticleTitle(),
-    // Dates hidden on standard notes to keep the stationery look clean
+    // Dates are hidden here to keep the welcome page clean
     Component.ContentMeta({ showReadingTime: false, showComma: false }),
     Component.TagList(),
   ],
@@ -38,16 +38,17 @@ export const defaultContentPageLayout: PageLayout = {
   ],
   right: [
     Component.DesktopOnly(Component.TableOfContents()),
+    // Backlinks kept here; they only appear if other pages link to the current one
     Component.Backlinks(),
   ],
 }
 
-// components for folder/list pages (Like your screenshot)
+// components for folder/list pages (like /The-lists/)
 export const defaultListPageLayout: PageLayout = {
   beforeBody: [
     Component.Breadcrumbs(), 
     Component.ArticleTitle(), 
-    // Dates kept here as requested for the list view
+    // Dates are KEPT here as requested for your list view
     Component.ContentMeta({ showReadingTime: false, showComma: true })
   ],
   left: [

@@ -15,7 +15,7 @@ footer {
   display: none !important;
 }
 
-// 3. ICON SCALING
+// 3. ICON SCALING & SEARCH FIX
 .search-button, .darkmode-toggle {
   width: 20px !important;
   height: 20px !important;
@@ -26,12 +26,12 @@ svg {
   max-height: 18px !important;
 }
 
-// 4. IMAGE ALIGNMENT (Now Left-Aligned)
+// 4. IMAGE ALIGNMENT (Left-Aligned, no frames)
 img {
   max-width: 100%;
   height: auto;
   display: block;
-  margin-left: 0 !important; // Forces alignment to the left
+  margin-left: 0 !important;
   margin-right: auto !important;
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
@@ -39,8 +39,8 @@ img {
   box-shadow: none !important;
 }
 
-// 5. SELECTIVE DATE HIDING
-// Hides dates on standard pages but lets them show on list pages
+// 5. DATE MANAGEMENT
+// Hides dates on standard pages (index/notes)
 .page > .content-meta {
   display: none !important;
 }

@@ -1,16 +1,64 @@
-/* Fix icon scaling and hide all date/meta info */
+@use "./base.scss";
+
+// 1. TYPOGRAPHY & HEADERS
+// Makes all headers italic for that sophisticated stationery look
+h1, h2, h3, h4, h5, h6, .section-title {
+  font-style: italic !important;
+  font-weight: 500;
+}
+
+// 2. GLOBAL HIDDEN ELEMENTS
+// Completely hides the "Created with Quartz" footer
+footer {
+  display: none !important;
+}
+
+// Hides dates and reading times on notes and folder lists
+.content-meta, 
+.meta, 
+time {
+  display: none !important;
+}
+
+// 3. SIDEBAR "JAZZ" (The Why-Lists Link)
+// Adds smooth transitions for your custom sidebar link
+.sidebar-link {
+  transition: all 0.3s ease-in-out !important;
+  display: inline-block;
+}
+
+.sidebar-link:hover {
+  color: #225C59 !important; // Changes to Deep Pine green on hover
+  letter-spacing: 0.8px;      // Subtle expansion effect
+  transform: translateX(3px); // Tiny "nudge" to the right
+  text-decoration: underline;
+}
+
+// 4. ICON SCALING
+// Keeps Search and Darkmode icons from looking oversized
 .search-button, 
 .darkmode-toggle {
-  width: 22px !important;
-  height: 22px !important;
+  width: 20px !important;
+  height: 20px !important;
   padding: 0 !important;
 }
 
 svg {
-  max-width: 20px !important;
-  max-height: 20px !important;
+  max-width: 18px !important;
+  max-height: 18px !important;
 }
 
-.content-meta, .meta, time {
-  display: none !important;
+// 5. PAINTING GALLERY EFFECTS
+// Makes images look like framed art in a gallery
+img {
+  border: 8px solid #ffffff;       // White matting
+  outline: 1px solid #C5C2A5;      // Thin walnut outer frame
+  box-shadow: 4px 4px 15px rgba(0,0,0,0.08); // Soft depth shadow
+  transition: transform 0.5s ease; // Smooth zoom transition
+  display: block;
+  margin: 1.5rem auto;             // Centers images with breathing room
+}
+
+img:hover {
+  transform: scale(1.03);          // Slight "pop" when admiring the art
 }

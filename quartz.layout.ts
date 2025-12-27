@@ -24,6 +24,16 @@ export const defaultContentPageLayout: PageLayout = {
   ],
   left: [
     Component.PageTitle(),
+    // Added "Why lists?" link with the class for your CSS hover jazz
+    Component.Html({
+      html: `
+        <div style="margin-top: -1.5rem; margin-bottom: 2rem;">
+          <a class="sidebar-link" 
+             style="font-style: italic; font-size: 0.9rem; color: var(--secondary); text-decoration: none;" 
+             href="./Why-lists">Why lists?</a>
+        </div>
+      `
+    }),
     Component.MobileOnly(Component.Spacer()),
     Component.Flex({
       components: [
@@ -32,7 +42,6 @@ export const defaultContentPageLayout: PageLayout = {
           grow: true,
         },
         { Component: Component.Darkmode() },
-        // ReaderMode removed
       ],
     }),
   ],
@@ -51,6 +60,16 @@ export const defaultListPageLayout: PageLayout = {
   ],
   left: [
     Component.PageTitle(),
+    // Keep it consistent on list pages
+    Component.Html({
+      html: `
+        <div style="margin-top: -1.5rem; margin-bottom: 2rem;">
+          <a class="sidebar-link" 
+             style="font-style: italic; font-size: 0.9rem; color: var(--secondary); text-decoration: none;" 
+             href="./Why-lists">Why lists?</a>
+        </div>
+      `
+    }),
     Component.MobileOnly(Component.Spacer()),
     Component.Flex({
       components: [
@@ -59,7 +78,6 @@ export const defaultListPageLayout: PageLayout = {
           grow: true,
         },
         { Component: Component.Darkmode() },
-        // ReaderMode removed here too to fix the list pages
       ],
     }),
   ],

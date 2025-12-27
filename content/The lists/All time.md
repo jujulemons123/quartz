@@ -1,2 +1,3 @@
 - [[Countries been]]
-- [[Seasonal playlists since 2017]]
+- [[Seasonal playlists]]
+- [[Loved paintings]]

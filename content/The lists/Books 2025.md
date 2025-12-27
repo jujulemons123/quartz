@@ -23,5 +23,6 @@
 23. _The Age of Innocence_ by Edith Wharton 
 24. _Great Gatsby_ by F. Scott Fitzgerald
 25. _Tender is the Night_ by F. Scott Fitzgerald
-26. _The Years of Lyndon Johnson; Volume 1: The Path to Power_ by Robert A. Caro 
-27. _Deng Xiao Ping and The Transformation of China_ by Ezra F. Vogel
+26. _The Years of Lyndon Johnson; Volume 1: The Path to Power_ by Robert A. Caro
+27. *William Pitt the Younger* by William Hague
+28. _Deng Xiao Ping and The Transformation of China_ by Ezra F. Vogel

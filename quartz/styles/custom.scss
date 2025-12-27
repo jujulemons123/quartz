@@ -1,14 +1,14 @@
 @use "./base.scss";
 
-
-// 3. BREADCRUMB SPECIFIC STYLING
-.breadcrumbs a {
-  text-decoration: none !important;
+// 2. FORCE FONTS
+h1, h2, h3, h4, h5, h6, .page-title, .backlinks > h3, .breadcrumb-element {
+  font-family: 'Lustria', serif !important;
+  font-style: italic !important;
   color: var(--secondary) !important;
 }
 
-.breadcrumbs a:hover {
-  text-decoration: underline !important;
+body, p, li, span, a, .backlinks li {
+  font-family: 'Cormorant Garamond', serif !important;
 }
 
 // 4. LAYOUT CLEANUP

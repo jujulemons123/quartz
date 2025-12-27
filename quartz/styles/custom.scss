@@ -9,37 +9,3 @@ h1, h2, h3, h4, h5, h6, .section-title {
 footer {
   display: none !important;
 }
-
-// Hides the "15 items under this folder" text
-.folder-outer > p {
-  display: none !important;
-}
-
-// 3. SEARCH & DARKMODE FIX
-// This prevents the "messed up" overlapping icons
-.search {
-  margin-bottom: 1rem;
-}
-
-.darkmode-toggle {
-  margin-top: 0.5rem;
-}
-
-// 4. IMAGE ALIGNMENT (Strict Left-Align)
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin-left: 0 !important;
-  margin-right: auto !important;
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
-  border: none !important;
-  box-shadow: none !important;
-}
-
-// 5. DATE MANAGEMENT
-// Hides dates specifically on the home page and standard notes
-.page > .content-meta {
-  display: none !important;
-}

@@ -1,16 +1,16 @@
-@use "./base.scss";
-
-// Makes all headers italic for the Bespoke Stationery look
-h1, h2, h3, h4, h5, h6, .section-title {
-  font-style: italic !important;
+/* Fix icon scaling and hide all date/meta info */
+.search-button, 
+.darkmode-toggle {
+  width: 22px !important;
+  height: 22px !important;
+  padding: 0 !important;
 }
 
-// Hides the "Created with Quartz" footer text entirely
-footer {
-  display: none !important;
+svg {
+  max-width: 20px !important;
+  max-height: 20px !important;
 }
 
-// Hides the date and reading time line from all pages
-.content-meta {
+.content-meta, .meta, time {
   display: none !important;
 }

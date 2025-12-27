@@ -25,12 +25,12 @@ export const defaultContentPageLayout: PageLayout = {
   left: [
     Component.PageTitle(),
     Component.MobileOnly(Component.Spacer()),
-    // This safely adds your "Why lists?" link under the title
+    // This adds your "Why lists?" link under the title
     Component.DesktopOnly(Component.RecentNotes({ 
-      title: "", 
+      title: "About", 
       limit: 1, 
-      filter: (f) => f.slug === "Why-lists",
-      linkToMore: false 
+      linkToMore: false,
+      filter: (f) => f.slug === "Why-lists" 
     })),
     Component.Flex({
       components: [
@@ -59,10 +59,10 @@ export const defaultListPageLayout: PageLayout = {
     Component.PageTitle(),
     Component.MobileOnly(Component.Spacer()),
     Component.DesktopOnly(Component.RecentNotes({ 
-      title: "", 
+      title: "About", 
       limit: 1, 
-      filter: (f) => f.slug === "Why-lists",
-      linkToMore: false 
+      linkToMore: false,
+      filter: (f) => f.slug === "Why-lists" 
     })),
     Component.Flex({
       components: [

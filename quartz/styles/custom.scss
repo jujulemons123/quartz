@@ -11,11 +11,14 @@ footer, .content-meta, .meta, time {
 }
 
 // 3. SIDEBAR LINK JAZZ
-// Styles the "Why lists?" link we added via RecentNotes
+// Styles the RecentNotes component to look like a simple sidebar link
 .recent-notes {
   margin-top: -1.5rem;
   margin-bottom: 2rem;
-  & > h3 { display: none; } // Hides the component header
+}
+
+.recent-notes > h3 {
+  display: none !important; // Hides the "About" title
 }
 
 .recent-notes a {
@@ -28,7 +31,7 @@ footer, .content-meta, .meta, time {
 }
 
 .recent-notes a:hover {
-  color: #225C59 !important; // Deep Pine Green
+  color: #225C59 !important; // Changes to Deep Pine Green
   letter-spacing: 0.8px !important;
   transform: translateX(3px) !important;
   text-decoration: underline !important;

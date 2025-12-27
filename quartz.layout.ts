@@ -7,7 +7,7 @@ export const sharedPageComponents: SharedLayout = {
   header: [],
   afterBody: [],
   footer: Component.Footer({
-    links: {}, // Removes GitHub/Discord links globally
+    links: {}, 
   }),
 }
 
@@ -19,18 +19,18 @@ export const defaultContentPageLayout: PageLayout = {
       condition: (page) => page.fileData.slug !== "index",
     }),
     Component.ArticleTitle(),
-    Component.ContentMeta({ showReadingTime: false, showComma: false }),
+    // Dates are now restored
+    Component.ContentMeta({ showReadingTime: false, showComma: true }),
     Component.TagList(),
   ],
   left: [
     Component.PageTitle(),
     Component.MobileOnly(Component.Spacer()),
-    // This adds your "Why lists?" link under the title
+    // Stable "Why lists?" link
     Component.DesktopOnly(Component.RecentNotes({ 
-      title: "About", 
-      limit: 1, 
-      linkToMore: false,
-      filter: (f) => f.slug === "Why-lists" 
+      title: "Why lists?", 
+      limit: 0, 
+      linkToMore: false 
     })),
     Component.Flex({
       components: [
@@ -53,16 +53,16 @@ export const defaultListPageLayout: PageLayout = {
   beforeBody: [
     Component.Breadcrumbs(), 
     Component.ArticleTitle(), 
-    Component.ContentMeta({ showReadingTime: false, showComma: false })
+    // Dates restored for list pages too
+    Component.ContentMeta({ showReadingTime: false, showComma: true })
   ],
   left: [
     Component.PageTitle(),
     Component.MobileOnly(Component.Spacer()),
     Component.DesktopOnly(Component.RecentNotes({ 
-      title: "About", 
-      limit: 1, 
-      linkToMore: false,
-      filter: (f) => f.slug === "Why-lists" 
+      title: "Why lists?", 
+      limit: 0, 
+      linkToMore: false 
     })),
     Component.Flex({
       components: [
@@ -72,7 +72,3 @@ export const defaultListPageLayout: PageLayout = {
         },
         { Component: Component.Darkmode() },
       ],
-    }),
-  ],
-  right: [],
-}

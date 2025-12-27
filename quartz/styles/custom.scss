@@ -6,34 +6,31 @@ h1, h2, h3, h4, h5, h6, .section-title {
 }
 
 // 2. GLOBAL HIDDEN ELEMENTS
-footer, .content-meta, .meta, time {
+footer {
   display: none !important;
 }
 
-// 3. SIDEBAR LINK JAZZ
-// Styles the RecentNotes component to look like a simple sidebar link
+// Hides the "13 items under this folder" text
+.folder-outer > p {
+  display: none !important;
+}
+
+// 3. SIDEBAR LINK STYLE
 .recent-notes {
   margin-top: -1.5rem;
   margin-bottom: 2rem;
 }
 
-.recent-notes > h3 {
-  display: none !important; // Hides the "About" title
-}
-
-.recent-notes a {
+.recent-notes h3 a {
   font-style: italic !important;
   font-size: 0.9rem !important;
   color: var(--secondary) !important;
   text-decoration: none !important;
-  transition: all 0.3s ease-in-out !important;
-  display: inline-block;
+  transition: color 0.3s ease;
 }
 
-.recent-notes a:hover {
-  color: #225C59 !important; // Changes to Deep Pine Green
-  letter-spacing: 0.8px !important;
-  transform: translateX(3px) !important;
+.recent-notes h3 a:hover {
+  color: #225C59 !important; // Deep Pine
   text-decoration: underline !important;
 }
 
@@ -48,15 +45,14 @@ svg {
   max-height: 18px !important;
 }
 
-// 5. PAINTING GALLERY EFFECTS
+// 5. NORMAL IMAGES (Frames removed)
 img {
-  border: 8px solid #ffffff;
-  outline: 1px solid #C5C2A5;
-  box-shadow: 4px 4px 15px rgba(0,0,0,0.08);
-  transition: transform 0.5s ease;
+  max-width: 100%;
+  height: auto;
   display: block;
   margin: 1.5rem auto;
-}
-img:hover {
-  transform: scale(1.03);
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+  transition: none !important;
 }

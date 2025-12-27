@@ -4,7 +4,7 @@ theme: {
       typography: {
         header: "Cormorant Garamond",
         body: "Lustria",
-        code: "IBM Plex Mono", // Ensure there is a comma here!
+        code: "IBM Plex Mono",
       },
       colors: {
         lightMode: {
@@ -16,7 +16,7 @@ theme: {
           secondary: "#8B0000",
           tertiary: "#225C59",
           highlight: "rgba(139, 0, 0, 0.05)",
-          textHighlight: "#fff23688", // Ensure this comma exists!
+          textHighlight: "#fff23688",
         },
         darkMode: {
           light: "#161618",

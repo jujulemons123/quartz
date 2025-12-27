@@ -6,6 +6,7 @@ const config: QuartzConfig = {
     pageTitle: "JGW's Archive",
     enableGPA: false,
     enablePageViews: false,
+    defaultDateType: "created", // Added this to fix the Build Error
     theme: {
       fontOrigin: "googleFonts",
       cdnCaching: true,
@@ -58,8 +59,8 @@ const config: QuartzConfig = {
       Plugin.ComponentResources(),
       Plugin.ContentPage(),
       Plugin.FolderPage({
-        showFolderTitle: false, // Fixes "Folder: The-lists"
-        showFolderCount: false, // Fixes "15 items under this folder"
+        showFolderTitle: false, // Keeps "Folder: The-lists" hidden
+        showFolderCount: false, // Keeps "15 items..." hidden
       }),
       Plugin.TagPage(),
       Plugin.ContentIndex({

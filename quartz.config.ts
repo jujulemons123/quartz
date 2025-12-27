@@ -1,81 +1,96 @@
-import { PageLayout, SharedLayout } from "./quartz/cfg"
-import * as Component from "./quartz/components"
+import { QuartzConfig } from "./quartz/cfg"
+import * as Plugin from "./quartz/plugins"
 
-// components shared across all pages
-export const sharedPageComponents: SharedLayout = {
-  head: Component.Head(),
-  header: [],
-  afterBody: [],
-  footer: Component.Footer({
-    links: {}, // Keeps footer clean of GitHub/Discord links
-  }),
-}
-
-// components for single notes (Home page and Archive notes)
-export const defaultContentPageLayout: PageLayout = {
-  beforeBody: [
-    Component.ConditionalRender({
-      component: Component.Breadcrumbs(),
-      condition: (page) => page.fileData.slug !== "index",
-    }),
-    Component.ArticleTitle(),
-    Component.ContentMeta({ showReadingTime: false, showComma: false }),
-    Component.TagList(),
-  ],
-  left: [
-    Component.PageTitle(),
-    // Added "Why lists?" link directly under the Page Title
-    Component.Html({
-      html: `
-        <div style="margin-top: -1.5rem; margin-bottom: 2rem;">
-          <a style="font-style: italic; font-size: 0.9rem; color: var(--secondary); text-decoration: none;" href="./Why-lists">Why lists?</a>
-        </div>
-      `
-    }),
-    Component.MobileOnly(Component.Spacer()),
-    Component.Flex({
-      components: [
-        {
-          Component: Component.Search(),
-          grow: true,
+/**
+ * Quartz 4 Configuration
+ *
+ * See https://quartz.jzhao.xyz/configuration for more information.
+ */
+const config: QuartzConfig = {
+  configuration: {
+    pageTitle: "JGW's Archive",
+    pageTitleSuffix: "",
+    enableSPA: true,
+    enablePopovers: true,
+    analytics: {
+      provider: "plausible",
+    },
+    locale: "en-US",
+    baseUrl: "jujulemons123.github.io/quartz",
+    ignorePatterns: ["private", "templates", ".obsidian"],
+    defaultDateType: "modified",
+    theme: {
+      fontOrigin: "googleFonts",
+      cdnCaching: true,
+      typography: {
+        header: "Cormorant Garamond",
+        body: "Lustria",
+        code: "IBM Plex Mono",
+      },
+      colors: {
+        lightMode: {
+          light: "#FFFDE7",
+          lightgray: "#C5C2A5",
+          gray: "#979690",
+          darkgray: "#4A3728",
+          dark: "#1B2620",
+          secondary: "#8B0000",
+          tertiary: "#225C59",
+          highlight: "rgba(139, 0, 0, 0.05)",
+          textHighlight: "#fff23688",
         },
-        { Component: Component.Darkmode() },
-      ],
-    }),
-  ],
-  right: [
-    Component.DesktopOnly(Component.TableOfContents()),
-    Component.Backlinks(),
-  ],
+        darkMode: {
+          light: "#161618",
+          lightgray: "#393639",
+          gray: "#646464",
+          darkgray: "#d4d4d4",
+          dark: "#ebebec",
+          secondary: "#7b97aa",
+          tertiary: "#84a59d",
+          highlight: "rgba(143, 159, 169, 0.15)",
+          textHighlight: "#b3aa0288",
+        },
+      },
+    },
+  },
+  plugins: {
+    transformers: [
+      Plugin.FrontMatter(),
+      Plugin.CreatedModifiedDate({
+        priority: ["frontmatter", "git", "filesystem"],
+      }),
+      Plugin.SyntaxHighlighting({
+        theme: {
+          light: "github-light",
+          dark: "github-dark",
+        },
+        keepBackground: false,
+      }),
+      Plugin.ObsidianFlavoredMarkdown({ enableInHtmlEmbed: false }),
+      Plugin.GitHubFlavoredMarkdown(),
+      Plugin.TableOfContents(),
+      Plugin.CrawlLinks({ markdownLinkResolution: "shortest" }),
+      Plugin.Description(),
+      Plugin.Latex({ renderEngine: "katex" }),
+    ],
+    filters: [Plugin.RemoveDrafts()],
+    emitters: [
+      Plugin.AliasRedirects(),
+      Plugin.ComponentResources(),
+      Plugin.ContentPage(),
+      Plugin.FolderPage(),
+      Plugin.TagPage(),
+      Plugin.ContentIndex({
+        enableSiteMap: true,
+        enableRSS: true,
+      }),
+      Plugin.Assets(),
+      Plugin.Static(),
+      Plugin.Favicon(),
+      Plugin.NotFoundPage(),
+      Plugin.CustomOgImages(),
+    ],
+  },
 }
 
-// components for folder/list pages (like /The-lists/)
-export const defaultListPageLayout: PageLayout = {
-  beforeBody: [
-    Component.Breadcrumbs(), 
-    Component.ArticleTitle(), 
-    Component.ContentMeta({ showReadingTime: false, showComma: false })
-  ],
-  left: [
-    Component.PageTitle(),
-    // Keep the link consistent on list pages too
-    Component.Html({
-      html: `
-        <div style="margin-top: -1.5rem; margin-bottom: 2rem;">
-          <a style="font-style: italic; font-size: 0.9rem; color: var(--secondary); text-decoration: none;" href="./Why-lists">Why lists?</a>
-        </div>
-      `
-    }),
-    Component.MobileOnly(Component.Spacer()),
-    Component.Flex({
-      components: [
-        {
-          Component: Component.Search(),
-          grow: true,
-        },
-        { Component: Component.Darkmode() },
-      ],
-    }),
-  ],
-  right: [],
-}
+export default config

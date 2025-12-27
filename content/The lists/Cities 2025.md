@@ -2,7 +2,7 @@
 2. Limeira
 3. São Paulo
 4. Annecy
-5. Val-d’Isère
+5. Val-d'Isère
 6. Tignes
 7. DC
 8. Arlington
@@ -11,7 +11,7 @@
 11. Palermo
 12. Venice
 13. Paris
-14. Shefield 
+14. Sheffield
 15. Hatfield
 16. Copenhagen
 17. Oxford
@@ -22,13 +22,13 @@
 22. Berlin
 23. Liverpool
 24. Manchester
-25. San Francisco 
-26. Yosemite village 
-27. Berkeley 
+25. San Francisco
+26. Yosemite Village
+27. Berkeley
 28. Palo Alto
-29. Brussels 
-30. Guatemala City 
-31. Antigua 
+29. Brussels
+30. Guatemala City
+31. Antigua
 32. San Juan La Laguna
 33. San Marcos La Laguna
 34. Flores

@@ -1,64 +1,59 @@
 @use "./base.scss";
 
-// 1. TYPOGRAPHY & HEADERS
-// Makes all headers italic for that sophisticated stationery look
+// 1. TYPOGRAPHY
 h1, h2, h3, h4, h5, h6, .section-title {
   font-style: italic !important;
-  font-weight: 500;
 }
 
 // 2. GLOBAL HIDDEN ELEMENTS
-// Completely hides the "Created with Quartz" footer
-footer {
+footer, .content-meta, .meta, time {
   display: none !important;
 }
 
-// Hides dates and reading times on notes and folder lists
-.content-meta, 
-.meta, 
-time {
-  display: none !important;
+// 3. SIDEBAR LINK JAZZ
+// Styles the "Why lists?" link we added via RecentNotes
+.recent-notes {
+  margin-top: -1.5rem;
+  margin-bottom: 2rem;
+  & > h3 { display: none; } // Hides the component header
 }
 
-// 3. SIDEBAR "JAZZ" (The Why-Lists Link)
-// Adds smooth transitions for your custom sidebar link
-.sidebar-link {
+.recent-notes a {
+  font-style: italic !important;
+  font-size: 0.9rem !important;
+  color: var(--secondary) !important;
+  text-decoration: none !important;
   transition: all 0.3s ease-in-out !important;
   display: inline-block;
 }
 
-.sidebar-link:hover {
-  color: #225C59 !important; // Changes to Deep Pine green on hover
-  letter-spacing: 0.8px;      // Subtle expansion effect
-  transform: translateX(3px); // Tiny "nudge" to the right
-  text-decoration: underline;
+.recent-notes a:hover {
+  color: #225C59 !important; // Deep Pine Green
+  letter-spacing: 0.8px !important;
+  transform: translateX(3px) !important;
+  text-decoration: underline !important;
 }
 
 // 4. ICON SCALING
-// Keeps Search and Darkmode icons from looking oversized
-.search-button, 
-.darkmode-toggle {
+.search-button, .darkmode-toggle {
   width: 20px !important;
   height: 20px !important;
   padding: 0 !important;
 }
-
 svg {
   max-width: 18px !important;
   max-height: 18px !important;
 }
 
 // 5. PAINTING GALLERY EFFECTS
-// Makes images look like framed art in a gallery
 img {
-  border: 8px solid #ffffff;       // White matting
-  outline: 1px solid #C5C2A5;      // Thin walnut outer frame
-  box-shadow: 4px 4px 15px rgba(0,0,0,0.08); // Soft depth shadow
-  transition: transform 0.5s ease; // Smooth zoom transition
+  border: 8px solid #ffffff;
+  outline: 1px solid #C5C2A5;
+  box-shadow: 4px 4px 15px rgba(0,0,0,0.08);
+  transition: transform 0.5s ease;
   display: block;
-  margin: 1.5rem auto;             // Centers images with breathing room
+  margin: 1.5rem auto;
 }
-
 img:hover {
-  transform: scale(1.03);          // Slight "pop" when admiring the art
+  transform: scale(1.03);
 }

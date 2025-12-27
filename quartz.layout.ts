@@ -7,11 +7,11 @@ export const sharedPageComponents: SharedLayout = {
   header: [],
   afterBody: [],
   footer: Component.Footer({
-    links: {}, // Removes GitHub/Discord links from EVERY page
+    links: {}, // Removes GitHub/Discord links globally
   }),
 }
 
-// components for single notes (like your home page)
+// components for single notes (Home page and Archive notes)
 export const defaultContentPageLayout: PageLayout = {
   beforeBody: [
     Component.ConditionalRender({
@@ -24,17 +24,14 @@ export const defaultContentPageLayout: PageLayout = {
   ],
   left: [
     Component.PageTitle(),
-    // Added "Why lists?" link with the class for your CSS hover jazz
-    Component.Html({
-      html: `
-        <div style="margin-top: -1.5rem; margin-bottom: 2rem;">
-          <a class="sidebar-link" 
-             style="font-style: italic; font-size: 0.9rem; color: var(--secondary); text-decoration: none;" 
-             href="./Why-lists">Why lists?</a>
-        </div>
-      `
-    }),
     Component.MobileOnly(Component.Spacer()),
+    // This safely adds your "Why lists?" link under the title
+    Component.DesktopOnly(Component.RecentNotes({ 
+      title: "", 
+      limit: 1, 
+      filter: (f) => f.slug === "Why-lists",
+      linkToMore: false 
+    })),
     Component.Flex({
       components: [
         {
@@ -51,7 +48,7 @@ export const defaultContentPageLayout: PageLayout = {
   ],
 }
 
-// components for folder/list pages (like /The-lists/2024)
+// components for folder/list pages
 export const defaultListPageLayout: PageLayout = {
   beforeBody: [
     Component.Breadcrumbs(), 
@@ -60,17 +57,13 @@ export const defaultListPageLayout: PageLayout = {
   ],
   left: [
     Component.PageTitle(),
-    // Keep it consistent on list pages
-    Component.Html({
-      html: `
-        <div style="margin-top: -1.5rem; margin-bottom: 2rem;">
-          <a class="sidebar-link" 
-             style="font-style: italic; font-size: 0.9rem; color: var(--secondary); text-decoration: none;" 
-             href="./Why-lists">Why lists?</a>
-        </div>
-      `
-    }),
     Component.MobileOnly(Component.Spacer()),
+    Component.DesktopOnly(Component.RecentNotes({ 
+      title: "", 
+      limit: 1, 
+      filter: (f) => f.slug === "Why-lists",
+      linkToMore: false 
+    })),
     Component.Flex({
       components: [
         {

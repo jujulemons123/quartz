@@ -6,27 +6,27 @@ const config: QuartzConfig = {
     pageTitle: "JGW's Archive",
     enableGPA: false,
     enablePageViews: false,
-    defaultDateType: "created", // Mandatory for build
+    defaultDateType: "created",
     generateSocialImages: false,
     baseUrl: "jujulemons123.github.io/quartz",
-    ignorePatterns: [], // Mandatory for build
+    ignorePatterns: [],
     theme: {
       fontOrigin: "googleFonts",
       cdnCaching: true,
       typography: {
-        header: "Lustria", // Your Original Header Font
-        body: "Cormorant Garamond", // Your Original Body Font
+        header: "Lustria",            // Header Font restored
+        body: "Cormorant Garamond",   // Body Font restored
         code: "IBM Plex Mono",
       },
       colors: {
         lightMode: {
-          light: "#F5F2DC",      // Your Parchment Background
-          lightgray: "#C5C2A5",  // Your Muted Sage
-          gray: "#8E8B6D",
-          darkgray: "#4E4B3A",
-          dark: "#225C59",       // Your Pine Green
-          medium: "#A63429",     // Your Walnut Red
-          secondary: "#A63429",  // Your Theme Red
+          light: "#fcfaf1",          // Original Parchment Background
+          lightgray: "#e5e5e5",
+          gray: "#b8b8b8",
+          darkgray: "#4e4e4e",
+          dark: "#2b2b2b",
+          medium: "#8b2626",         // Original Walnut Red
+          secondary: "#8b2626",      // Your Theme Red
           tertiary: "#84a59d",
           highlight: "rgba(143, 159, 169, 0.15)",
         },
@@ -36,8 +36,8 @@ const config: QuartzConfig = {
           gray: "#646464",
           darkgray: "#d4d4d4",
           dark: "#ebebec",
-          medium: "#A63429",
-          secondary: "#A63429",
+          medium: "#8b2626",
+          secondary: "#8b2626",
           tertiary: "#84a59d",
           highlight: "rgba(143, 159, 169, 0.15)",
         },

@@ -22,7 +22,7 @@ export const defaultContentPageLayout: PageLayout = {
       condition: (page) => page.fileData.slug !== "index",
     }),
     Component.ArticleTitle(),
-    // Hidden reading time and comma for a cleaner look
+    // Reading time hidden here
     Component.ContentMeta({ showReadingTime: false, showComma: false }),
     Component.TagList(),
   ],
@@ -39,12 +39,12 @@ export const defaultContentPageLayout: PageLayout = {
         { Component: Component.ReaderMode() },
       ],
     }),
-    // Explorer has been removed from here
+    // Explorer removed
   ],
   right: [
     Component.DesktopOnly(Component.TableOfContents()),
     Component.Backlinks(),
-    // Graph has been removed from here
+    // Graph removed
   ],
 }
 
@@ -67,7 +67,7 @@ export const defaultListPageLayout: PageLayout = {
         { Component: Component.Darkmode() },
       ],
     }),
-    // Explorer has been removed from here as well
+    // Explorer removed
   ],
   right: [],
 }

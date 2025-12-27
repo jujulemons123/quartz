@@ -1,5 +1,5 @@
 1. Brazil
-2. Perto Rico 
+2. Puerto Rico 
 3. England
 4. USA 
 5. France
@@ -34,20 +34,19 @@
 34. Croatia 
 35. Costa Rica 
 36. Saudi Arabia 
-37. Morocco
-38. Spain
-39. Vatican City
-40. Morocco 
-41. Denmark 
-42. Turkey
-43. Austria 
-44. Serbia
-45. Rwanda 
-46. Qatar
-47. Malta
-48. Greece
-49. Poland
-50. Bosnia
-51. Ireland 
-52. Egypt
-53. Guatemala
+37. Spain
+38. Vatican City
+39. Morocco 
+40. Denmark 
+41. Turkey
+42. Austria 
+43. Serbia
+44. Rwanda 
+45. Qatar
+46. Malta
+47. Greece
+48. Poland
+49. Bosnia and Herzegovina
+50. Ireland 
+51. Egypt
+52. Guatemala

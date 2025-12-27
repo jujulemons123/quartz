@@ -10,31 +10,12 @@ footer {
   display: none !important;
 }
 
-// Hides the "13 items under this folder" text
+// Hides the "15 items under this folder" text
 .folder-outer > p {
   display: none !important;
 }
 
-// 3. SIDEBAR LINK STYLE
-.recent-notes {
-  margin-top: -1.5rem;
-  margin-bottom: 2rem;
-}
-
-.recent-notes h3 a {
-  font-style: italic !important;
-  font-size: 0.9rem !important;
-  color: var(--secondary) !important;
-  text-decoration: none !important;
-  transition: color 0.3s ease;
-}
-
-.recent-notes h3 a:hover {
-  color: #225C59 !important; // Deep Pine
-  text-decoration: underline !important;
-}
-
-// 4. ICON SCALING
+// 3. ICON SCALING
 .search-button, .darkmode-toggle {
   width: 20px !important;
   height: 20px !important;
@@ -45,14 +26,21 @@ svg {
   max-height: 18px !important;
 }
 
-// 5. NORMAL IMAGES (Frames removed)
+// 4. IMAGE ALIGNMENT (Now Left-Aligned)
 img {
   max-width: 100%;
   height: auto;
   display: block;
-  margin: 1.5rem auto;
+  margin-left: 0 !important; // Forces alignment to the left
+  margin-right: auto !important;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
   border: none !important;
   box-shadow: none !important;
-  outline: none !important;
-  transition: none !important;
+}
+
+// 5. SELECTIVE DATE HIDING
+// Hides dates on standard pages but lets them show on list pages
+.page > .content-meta {
+  display: none !important;
 }

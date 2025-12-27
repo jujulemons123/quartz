@@ -19,19 +19,13 @@ export const defaultContentPageLayout: PageLayout = {
       condition: (page) => page.fileData.slug !== "index",
     }),
     Component.ArticleTitle(),
-    // Dates restored for the index and other pages
-    Component.ContentMeta({ showReadingTime: false, showComma: true }),
+    // Dates hidden on standard notes to keep the stationery look clean
+    Component.ContentMeta({ showReadingTime: false, showComma: false }),
     Component.TagList(),
   ],
   left: [
     Component.PageTitle(),
     Component.MobileOnly(Component.Spacer()),
-    // Stable "Why lists?" link
-    Component.DesktopOnly(Component.RecentNotes({ 
-      title: "Why lists?", 
-      limit: 0, 
-      linkToMore: false 
-    })),
     Component.Flex({
       components: [
         {
@@ -48,22 +42,17 @@ export const defaultContentPageLayout: PageLayout = {
   ],
 }
 
-// components for folder/list pages
+// components for folder/list pages (Like your screenshot)
 export const defaultListPageLayout: PageLayout = {
   beforeBody: [
     Component.Breadcrumbs(), 
     Component.ArticleTitle(), 
-    // Dates restored for list pages too
+    // Dates kept here as requested for the list view
     Component.ContentMeta({ showReadingTime: false, showComma: true })
   ],
   left: [
     Component.PageTitle(),
     Component.MobileOnly(Component.Spacer()),
-    Component.DesktopOnly(Component.RecentNotes({ 
-      title: "Why lists?", 
-      limit: 0, 
-      linkToMore: false 
-    })),
     Component.Flex({
       components: [
         {

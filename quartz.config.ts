@@ -10,6 +10,7 @@ const config: QuartzConfig = {
     generateSocialImages: false,
     baseUrl: "jujulemons123.github.io/quartz",
     ignorePatterns: [],
+    enablePopovers: true, // <--- THIS is what turns them on
     theme: {
       fontOrigin: "googleFonts",
       cdnCaching: true,
@@ -50,15 +51,12 @@ const config: QuartzConfig = {
       Plugin.CreatedModifiedDate({ priority: ["frontmatter", "filesystem"] }),
       Plugin.Latex({ renderEngine: "katex" }),
       Plugin.SyntaxHighlighting(),
-      // This is the correct way to enable hover previews in your version
-      Plugin.ObsidianFlavoredMarkdown({ 
-        enableInHtmlEmbed: false, 
-        enablePopover: true, 
-      }),
+      Plugin.ObsidianFlavoredMarkdown({ enableInHtmlEmbed: false }),
       Plugin.GitHubFlavoredMarkdown(),
       Plugin.TableOfContents(),
       Plugin.CrawlLinks({ markdownLinkResolution: "shortest" }),
       Plugin.Description(),
+      // Plugin.Popovers() <--- DELETED: This line was the cause of the crash!
     ],
     filters: [Plugin.RemoveDrafts()],
     emitters: [

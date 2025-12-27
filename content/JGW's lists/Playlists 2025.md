@@ -1,0 +1,4 @@
+- [Spring 25](https://open.spotify.com/playlist/4xcvGHEnr4txkX7NYhBegZ?si=de0f8decd1f0470d)
+- [Summer 25](https://open.spotify.com/playlist/6fr9Zrp3ROMRIDiINYnsPA?si=59ab897e58974fe7)
+- [Autumn 25](https://open.spotify.com/playlist/3aOrQRCbH9pfbIVBs3krM5?si=f42c50bb01d442d2)
+- [Winter 25](https://open.spotify.com/playlist/4lFd7OZHcefciUtTKiMC6O?si=6db746a100d844a0)

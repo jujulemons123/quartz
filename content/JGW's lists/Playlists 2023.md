@@ -1,0 +1,4 @@
+- [Spring 23](https://open.spotify.com/playlist/05r7cbvXSlgFbIFMEOPksY?si=d6546eac7f0b4dca)
+- [Summer 23](https://open.spotify.com/playlist/4VT51bOFw6fPzgHbTKx1rZ?si=cdf9dc3c129248f5)
+- [Autumn 23](https://open.spotify.com/playlist/40aBqqiCWIZxxaEXN0B7WN?si=ee3ad7da62384988)
+- [Winter 23](https://open.spotify.com/playlist/3CBexkjZjv8sgkptsKERSP?si=3f7a33304a2d4506)

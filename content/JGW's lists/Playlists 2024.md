@@ -1,0 +1,4 @@
+- [Spring 24](https://open.spotify.com/playlist/2zzgWuxUMAHpk9v2iznv6w?si=6e63bad2eee54f7e)
+- [Summer 24](https://open.spotify.com/playlist/6g1swOq4xrGXyo6zPu4s2Q?si=1a112d378f4d4a38)
+- [Autumn 24](https://open.spotify.com/playlist/2JxHLTyPYGNVGpRXEepTV9?si=892495f90819419e)
+- [Winter 24](https://open.spotify.com/playlist/4XE5CQFd1WIk7IfnBvIUM7?si=bdc61e1f599945cd)

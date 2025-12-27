@@ -6,10 +6,9 @@ export const sharedPageComponents: SharedLayout = {
   head: Component.Head(),
   header: [],
   afterBody: [],
+beforeBody: [Component.Popovers()],
   footer: Component.Footer({
     links: {
-      GitHub: "https://github.com/jackyzha0/quartz",
-      "Discord Community": "https://discord.gg/cRFFHYye7t",
     },
   }),
 }
@@ -22,8 +21,6 @@ export const defaultContentPageLayout: PageLayout = {
       condition: (page) => page.fileData.slug !== "index",
     }),
     Component.ArticleTitle(),
-    // Hidden reading time and comma for a cleaner look
-    Component.ContentMeta({ showReadingTime: false, showComma: false }),
     Component.TagList(),
   ],
   left: [
@@ -53,7 +50,6 @@ export const defaultListPageLayout: PageLayout = {
   beforeBody: [
     Component.Breadcrumbs(), 
     Component.ArticleTitle(), 
-    Component.ContentMeta({ showReadingTime: false, showComma: false })
   ],
   left: [
     Component.PageTitle(),
@@ -67,7 +63,6 @@ export const defaultListPageLayout: PageLayout = {
         { Component: Component.Darkmode() },
       ],
     }),
-    // Explorer has been removed from here as well
   ],
   right: [],
 }

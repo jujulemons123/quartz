@@ -1,37 +1,32 @@
 import { QuartzConfig } from "./quartz/cfg"
 import * as Plugin from "./quartz/plugins"
 
-/**
- * Quartz 4.0 Configuration
- *
- * See https://quartz.jzhao.xyz/configuration for more information.
- */
 const config: QuartzConfig = {
   configuration: {
     pageTitle: "JGW's Archive",
     enableGPA: false,
     enablePageViews: false,
-    defaultDateType: "created", // Fixed: missing field
+    defaultDateType: "created", // Mandatory for build
     generateSocialImages: false,
     baseUrl: "jujulemons123.github.io/quartz",
-    ignorePatterns: [], // Fixed: missing field causing 'not iterable' error
+    ignorePatterns: [], // Mandatory for build
     theme: {
       fontOrigin: "googleFonts",
       cdnCaching: true,
       typography: {
-        header: "Lustria",
-        body: "Cormorant Garamond",
+        header: "Lustria", // Your Original Header Font
+        body: "Cormorant Garamond", // Your Original Body Font
         code: "IBM Plex Mono",
       },
       colors: {
         lightMode: {
-          light: "#F5F2DC",      // Parchment
-          lightgray: "#C5C2A5",  // Muted sage
+          light: "#F5F2DC",      // Your Parchment Background
+          lightgray: "#C5C2A5",  // Your Muted Sage
           gray: "#8E8B6D",
           darkgray: "#4E4B3A",
-          dark: "#225C59",       // Pine Green
-          medium: "#A63429",     // Walnut Red
-          secondary: "#A63429",  // Theme Red
+          dark: "#225C59",       // Your Pine Green
+          medium: "#A63429",     // Your Walnut Red
+          secondary: "#A63429",  // Your Theme Red
           tertiary: "#84a59d",
           highlight: "rgba(143, 159, 169, 0.15)",
         },
@@ -67,8 +62,8 @@ const config: QuartzConfig = {
       Plugin.ComponentResources(),
       Plugin.ContentPage(),
       Plugin.FolderPage({
-        showFolderTitle: false, // Fixes "Folder: The-lists"
-        showFolderCount: false, // Fixes "15 items under this folder"
+        showFolderTitle: false, // Keeps "Folder: The-lists" hidden
+        showFolderCount: false, // Keeps "15 items..." hidden
       }),
       Plugin.TagPage(),
       Plugin.ContentIndex({

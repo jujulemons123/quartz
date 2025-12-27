@@ -9,31 +9,19 @@ const config: QuartzConfig = {
     defaultDateType: "created",
     generateSocialImages: false,
     baseUrl: "jujulemons123.github.io/quartz",
-    ignorePatterns: [], // Mandatory for build
-   import { QuartzConfig } from "./quartz/cfg"
-import * as Plugin from "./quartz/plugins"
-
-const config: QuartzConfig = {
-  configuration: {
-    pageTitle: "JGW's Archive",
-    enableGPA: false,
-    enablePageViews: false,
-    defaultDateType: "created",
-    generateSocialImages: false,
-    baseUrl: "jujulemons123.github.io/quartz",
-    ignorePatterns: [], 
+    ignorePatterns: [],
     theme: {
       fontOrigin: "googleFonts",
       cdnCaching: true,
       typography: {
-        header: "Cormorant Garamond", // Restored per your request
-        body: "Lustria",             // Restored per your request
+        header: "Cormorant Garamond", // Exactly as requested
+        body: "Lustria",             // Exactly as requested
         code: "IBM Plex Mono",
       },
       colors: {
         lightMode: {
-          light: "#FFFDE7",          // Your exact background
-          lightgray: "#C5C2A5",      
+          light: "#FFFDE7",          // Your exact creamy background
+          lightgray: "#C5C2A5",
           gray: "#979690",
           darkgray: "#4A3728",
           dark: "#1B2620",
@@ -67,7 +55,7 @@ const config: QuartzConfig = {
       Plugin.TableOfContents(),
       Plugin.CrawlLinks({ markdownLinkResolution: "shortest" }),
       Plugin.Description(),
-      Plugin.Popovers(), // Fixed: keeps build green
+      Plugin.Popovers(), // Fixed build error from screenshot 21.40.44
     ],
     filters: [Plugin.RemoveDrafts()],
     emitters: [
@@ -75,43 +63,8 @@ const config: QuartzConfig = {
       Plugin.ComponentResources(),
       Plugin.ContentPage(),
       Plugin.FolderPage({
-        showFolderTitle: false, 
-        showFolderCount: false, 
-      }),
-      Plugin.TagPage(),
-      Plugin.ContentIndex({ enableSiteMap: true, enableRSS: true }),
-      Plugin.Assets(),
-      Plugin.Static(),
-      Plugin.NotFoundPage(),
-    ],
-  },
-}
-
-export default config
-        },
-      },
-    },
-  },
-  plugins: {
-    transformers: [
-      Plugin.FrontMatter(),
-      Plugin.CreatedModifiedDate({ priority: ["frontmatter", "filesystem"] }),
-      Plugin.Latex({ renderEngine: "katex" }),
-      Plugin.SyntaxHighlighting(),
-      Plugin.ObsidianFlavoredMarkdown({ enableInHtmlEmbed: false }),
-      Plugin.GitHubFlavoredMarkdown(),
-      Plugin.TableOfContents(),
-      Plugin.CrawlLinks({ markdownLinkResolution: "shortest" }),
-      Plugin.Description(),
-    ],
-    filters: [Plugin.RemoveDrafts()],
-    emitters: [
-      Plugin.AliasRedirects(),
-      Plugin.ComponentResources(),
-      Plugin.ContentPage(),
-      Plugin.FolderPage({
-        showFolderTitle: false, 
-        showFolderCount: false, 
+        showFolderTitle: false,
+        showFolderCount: false,
       }),
       Plugin.TagPage(),
       Plugin.ContentIndex({ enableSiteMap: true, enableRSS: true }),

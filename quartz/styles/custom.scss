@@ -1,17 +1,16 @@
 @use "./base.scss";
 
-// 2. FORCE FONTS
-h1, h2, h3, h4, h5, h6, .page-title, .backlinks > h3, .breadcrumb-element {
-  font-family: 'Cormorant Garamond', serif !important;
+// 1. TYPOGRAPHY 
+h1, h2, h3, h4, h5, h6, .section-title {
   font-style: italic !important;
-  color: var(--dark) !important;
 }
 
-// 4. LAYOUT CLEANUP
-footer, .folder-outer > p {
-  display: none !important;
+// 3. CLEANUP (Hides dates and folder counts)
+footer, .folder-outer > p, .page > .content-meta { 
+  display: none !important; 
 }
 
+// Left-align images for a cleaner aesthetic
 img {
   max-width: 100%;
   height: auto;
@@ -19,5 +18,3 @@ img {
   margin-left: 0 !important;
   margin-right: auto !important;
 }
-
-.search { margin-bottom: 2rem; }

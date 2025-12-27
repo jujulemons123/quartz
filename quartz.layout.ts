@@ -6,14 +6,17 @@ export const sharedPageComponents: SharedLayout = {
   head: Component.Head(),
   header: [],
   afterBody: [],
-beforeBody: [Component.Popovers()],
+  // ADDED Popovers here so they work globally
+  beforeBody: [Component.Popovers()], 
   footer: Component.Footer({
     links: {
+      GitHub: "https://github.com/jackyzha0/quartz",
+      "Discord Community": "https://discord.gg/cRFFHYye7t",
     },
   }),
 }
 
-// components for pages that display a single page (e.g. a single note)
+// components for single notes
 export const defaultContentPageLayout: PageLayout = {
   beforeBody: [
     Component.ConditionalRender({
@@ -21,6 +24,7 @@ export const defaultContentPageLayout: PageLayout = {
       condition: (page) => page.fileData.slug !== "index",
     }),
     Component.ArticleTitle(),
+    // Dates are staying removed as requested
     Component.TagList(),
   ],
   left: [
@@ -36,16 +40,14 @@ export const defaultContentPageLayout: PageLayout = {
         { Component: Component.ReaderMode() },
       ],
     }),
-    // Explorer has been removed from here
   ],
   right: [
     Component.DesktopOnly(Component.TableOfContents()),
     Component.Backlinks(),
-    // Graph has been removed from here
   ],
 }
 
-// components for pages that display lists of pages (e.g. tags or folders)
+// components for folder/list pages
 export const defaultListPageLayout: PageLayout = {
   beforeBody: [
     Component.Breadcrumbs(), 

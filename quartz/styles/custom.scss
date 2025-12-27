@@ -1,12 +1,16 @@
 @use "./base.scss";
 
-// This makes all headers (H1 to H6) italic
+// Makes all headers italic for the Bespoke Stationery look
 h1, h2, h3, h4, h5, h6, .section-title {
   font-style: italic !important;
-  font-weight: 500;
 }
 
-// This hides the date and reading time line entirely
+// Hides the "Created with Quartz" footer text entirely
+footer {
+  display: none !important;
+}
+
+// Hides the date and reading time line from all pages
 .content-meta {
   display: none !important;
 }

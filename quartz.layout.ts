@@ -7,10 +7,7 @@ export const sharedPageComponents: SharedLayout = {
   header: [],
   afterBody: [],
   footer: Component.Footer({
-    links: {
-      GitHub: "https://github.com/jackyzha0/quartz",
-      "Discord Community": "https://discord.gg/cRFFHYye7t",
-    },
+    links: {}, // This removes the GitHub and Discord links
   }),
 }
 
@@ -39,12 +36,12 @@ export const defaultContentPageLayout: PageLayout = {
         { Component: Component.ReaderMode() },
       ],
     }),
-    // Explorer removed
+    // Explorer removed from the list to clean up the sidebar
   ],
   right: [
     Component.DesktopOnly(Component.TableOfContents()),
     Component.Backlinks(),
-    // Graph removed
+    // Graph View removed
   ],
 }
 
@@ -67,7 +64,7 @@ export const defaultListPageLayout: PageLayout = {
         { Component: Component.Darkmode() },
       ],
     }),
-    // Explorer removed
+    // Explorer removed from list pages as well
   ],
   right: [],
 }

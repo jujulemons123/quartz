@@ -9,37 +9,67 @@ const config: QuartzConfig = {
     defaultDateType: "created",
     generateSocialImages: false,
     baseUrl: "jujulemons123.github.io/quartz",
-    ignorePatterns: [], // Technical fix for build
+    ignorePatterns: [], // Mandatory for build
     theme: {
+
       fontOrigin: "googleFonts",
+
       cdnCaching: true,
+
       typography: {
-        header: "Lustria",            // Header Font
-        body: "Cormorant Garamond",   // Body Font
+
+        header: "Cormorant Garamond",
+
+        body: "Lustria",
+
         code: "IBM Plex Mono",
+
       },
+
       colors: {
+
         lightMode: {
-          light: "#fcfaf1",          // Parchment
-          lightgray: "#e5e5e5",
-          gray: "#b8b8b8",
-          darkgray: "#4e4e4e",
-          dark: "#2b2b2b",
-          medium: "#8b2626",         // Walnut Red
-          secondary: "#8b2626",      // Theme Red
-          tertiary: "#84a59d",
-          highlight: "rgba(143, 159, 169, 0.15)",
+
+          light: "#FFFDE7",
+
+          lightgray: "#C5C2A5",
+
+          gray: "#979690",
+
+          darkgray: "#4A3728",
+
+          dark: "#1B2620",
+
+          secondary: "#8B0000",
+
+          tertiary: "#225C59",
+
+          highlight: "rgba(139, 0, 0, 0.05)",
+
+          textHighlight: "#fff23688",
+
         },
+
         darkMode: {
+
           light: "#161618",
+
           lightgray: "#393639",
+
           gray: "#646464",
+
           darkgray: "#d4d4d4",
+
           dark: "#ebebec",
-          medium: "#8b2626",
-          secondary: "#8b2626",
+
+          secondary: "#7b97aa",
+
           tertiary: "#84a59d",
+
           highlight: "rgba(143, 159, 169, 0.15)",
+
+          textHighlight: "#b3aa0288",
+
         },
       },
     },
@@ -62,14 +92,11 @@ const config: QuartzConfig = {
       Plugin.ComponentResources(),
       Plugin.ContentPage(),
       Plugin.FolderPage({
-        showFolderTitle: false, // Removes "Folder:"
-        showFolderCount: false, // Removes "15 items..."
+        showFolderTitle: false, 
+        showFolderCount: false, 
       }),
       Plugin.TagPage(),
-      Plugin.ContentIndex({
-        enableSiteMap: true,
-        enableRSS: true,
-      }),
+      Plugin.ContentIndex({ enableSiteMap: true, enableRSS: true }),
       Plugin.Assets(),
       Plugin.Static(),
       Plugin.NotFoundPage(),

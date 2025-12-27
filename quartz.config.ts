@@ -14,18 +14,18 @@ const config: QuartzConfig = {
       fontOrigin: "googleFonts",
       cdnCaching: true,
       typography: {
-        header: "Cormorant Garamond", // Your requested header font
-        body: "Lustria",             // Your requested body font
+        header: "Cormorant Garamond", 
+        body: "Lustria",             
         code: "IBM Plex Mono",
       },
       colors: {
         lightMode: {
-          light: "#FFFDE7",          // Your creamy background
+          light: "#FFFDE7",          
           lightgray: "#C5C2A5",      
           gray: "#979690",
           darkgray: "#4A3728",
           dark: "#1B2620",
-          secondary: "#8B0000",      // Your red theme color
+          secondary: "#8B0000",      
           tertiary: "#225C59",
           highlight: "rgba(139, 0, 0, 0.05)",
           textHighlight: "#fff23688",
@@ -50,12 +50,15 @@ const config: QuartzConfig = {
       Plugin.CreatedModifiedDate({ priority: ["frontmatter", "filesystem"] }),
       Plugin.Latex({ renderEngine: "katex" }),
       Plugin.SyntaxHighlighting(),
-      Plugin.ObsidianFlavoredMarkdown({ enableInHtmlEmbed: false }),
+      // This is the correct way to enable hover previews in your version
+      Plugin.ObsidianFlavoredMarkdown({ 
+        enableInHtmlEmbed: false, 
+        enablePopover: true, 
+      }),
       Plugin.GitHubFlavoredMarkdown(),
       Plugin.TableOfContents(),
       Plugin.CrawlLinks({ markdownLinkResolution: "shortest" }),
       Plugin.Description(),
-      Plugin.Popovers(), // FIXED: Correctly placed in transformers
     ],
     filters: [Plugin.RemoveDrafts()],
     emitters: [

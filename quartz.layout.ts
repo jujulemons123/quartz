@@ -7,11 +7,14 @@ export const sharedPageComponents: SharedLayout = {
   header: [],
   afterBody: [],
   footer: Component.Footer({
-    links: {}, // Removes GitHub/Discord links globally
+    links: {
+      GitHub: "https://github.com/jackyzha0/quartz",
+      "Discord Community": "https://discord.gg/cRFFHYye7t",
+    },
   }),
 }
 
-// components for single notes (Home page and Archive notes)
+// components for pages that display a single page (e.g. a single note)
 export const defaultContentPageLayout: PageLayout = {
   beforeBody: [
     Component.ConditionalRender({
@@ -19,6 +22,7 @@ export const defaultContentPageLayout: PageLayout = {
       condition: (page) => page.fileData.slug !== "index",
     }),
     Component.ArticleTitle(),
+    // Hidden reading time and comma for a cleaner look
     Component.ContentMeta({ showReadingTime: false, showComma: false }),
     Component.TagList(),
   ],
@@ -32,17 +36,19 @@ export const defaultContentPageLayout: PageLayout = {
           grow: true,
         },
         { Component: Component.Darkmode() },
-        // ReaderMode (Book Icon) has been deleted from here
+        { Component: Component.ReaderMode() },
       ],
     }),
+    // Explorer has been removed from here
   ],
   right: [
     Component.DesktopOnly(Component.TableOfContents()),
     Component.Backlinks(),
+    // Graph has been removed from here
   ],
 }
 
-// components for folder/list pages (like /The-lists/)
+// components for pages that display lists of pages (e.g. tags or folders)
 export const defaultListPageLayout: PageLayout = {
   beforeBody: [
     Component.Breadcrumbs(), 
@@ -59,9 +65,9 @@ export const defaultListPageLayout: PageLayout = {
           grow: true,
         },
         { Component: Component.Darkmode() },
-        // ReaderMode removed from here too
       ],
     }),
+    // Explorer has been removed from here as well
   ],
   right: [],
 }

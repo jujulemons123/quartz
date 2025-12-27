@@ -1,6 +1,6 @@
 theme: {
       fontOrigin: "googleFonts",
-      cdnCaching: true,
+      cdnCaching; true,
       typography: {
         header: "Cormorant Garamond",
         body: "Lustria",

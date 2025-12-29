@@ -26,3 +26,5 @@
 26. _The Years of Lyndon Johnson; Volume 1: The Path to Power_ by Robert A. Caro
 27. *William Pitt the Younger* by William Hague
 28. _Deng Xiao Ping and The Transformation of China_ by Ezra F. Vogel
+29. *The Buried Giant* by Kazuo Ishiguro
+30. *Breakneck* by Dan Wang

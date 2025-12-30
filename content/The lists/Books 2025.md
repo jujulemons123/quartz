@@ -28,3 +28,4 @@
 28. _Deng Xiao Ping and The Transformation of China_ by Ezra F. Vogel
 29. *The Buried Giant* by Kazuo Ishiguro
 30. *Breakneck* by Dan Wang
+31. *Le père Goriot* by Honoré de Balzac

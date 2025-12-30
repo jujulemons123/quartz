@@ -2,4 +2,3 @@
 - [[Seasonal playlists]]
 - [[Loved paintings]]
 - [[Rare poems I understand]]
-- [[Reasons I love Proust]]

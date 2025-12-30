@@ -1,4 +1,5 @@
 <img src="assets/Napoleon.jpg">
+
 - [[Countries been]]
 - [[Seasonal playlists]]
 - [[Loved paintings]]

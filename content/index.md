@@ -2,7 +2,7 @@
 ---
 title: The Years
 ---
-<img src="assets/Turner1.jpg" width="500">
+<img src="assets/Turner1.jpg" width="450">
 
 Lists of things I've done, seen, and heard.
 - [[2025]]

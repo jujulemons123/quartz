@@ -17,3 +17,4 @@
 17. [Flying a Kite](https://shop.royalacademy.org.uk/djanira-da-motta-e-silva-flying-a-kite-print?srsltid=AfmBOoqoknjZbN6v7BLu6FOubIL54DvX7OqDuWPEmAjEjLsvUEml1pm2) by Djanira da Motta e Silva
 18. [The Feast of the Bean King](https://fr.wikipedia.org/wiki/Fichier:Jacob_Jordaens_-_The_Feast_of_the_Bean_King_-_Google_Art_Project.jpg) by Jacob Jordaens
 19. [Audrey Hepburn](https://www.npg.org.uk/collections/search/portrait/mw283308/Audrey-Hepburn) by Mark Shaw
+20. [Destruction of Pompeii and Herculaneum](https://commons.wikimedia.org/wiki/File:Destruction_of_Pompeii_and_Herculaneum.jpg) by John Martin

@@ -1,4 +1,4 @@
-<img src="assets/Napoleon.jpg">
+<img src="assets/Napoleon.jpg" width="550">
 
 - [[Countries been]]
 - [[Seasonal playlists]]

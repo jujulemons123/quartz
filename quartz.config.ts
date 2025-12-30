@@ -1,7 +1,6 @@
 import { QuartzConfig } from "./quartz/cfg"
 import * as Plugin from "./quartz/plugins"
 
-// THIS LINE WAS MISSING OR BROKEN. IT DEFINES "config":
 const config: QuartzConfig = {
   configuration: {
     pageTitle: "JGW's Archive",
@@ -9,7 +8,7 @@ const config: QuartzConfig = {
     enablePageViews: false,
     defaultDateType: "created",
     generateSocialImages: false,
-    baseUrl: "jujulemons123.github.io/quartz",
+    baseUrl: "jgw-archive.com",
     ignorePatterns: [],
     enablePopovers: true, // Turns on popovers
     theme: {

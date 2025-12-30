@@ -18,3 +18,6 @@
 18. [The Feast of the Bean King](https://fr.wikipedia.org/wiki/Fichier:Jacob_Jordaens_-_The_Feast_of_the_Bean_King_-_Google_Art_Project.jpg) by Jacob Jordaens
 19. [Audrey Hepburn](https://www.npg.org.uk/collections/search/portrait/mw283308/Audrey-Hepburn) by Mark Shaw
 20. [Destruction of Pompeii and Herculaneum](https://commons.wikimedia.org/wiki/File:Destruction_of_Pompeii_and_Herculaneum.jpg) by John Martin
+21. [The Swing](https://en.wikipedia.org/wiki/The_Swing_%28Fragonard%29) by Jean-Honoré Fragonard
+22. [A Bar at the Folies-Bergère ](https://en.wikipedia.org/wiki/A_Bar_at_the_Folies-Berg%C3%A8re)by Édouard Manet
+23. [The Burning of the Houses of Lords and Commons, 16th October, 1834](https://en.wikipedia.org/wiki/The_Burning_of_the_Houses_of_Lords_and_Commons) by J. M. W. Turner
